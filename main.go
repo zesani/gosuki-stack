@@ -9,31 +9,31 @@ type stack []int
 type stackPure []int
 
 func main() {
-	var value stack
-	value.push(1)
-	value.push(2)
-	value.push(3)
-	value.push(4)
-	value.push(5)
-	value.pop()
-	value.pop()
-	value.pop()
-	pop, err := value.pop()
+	var stack stack
+	stack.push(1)
+	stack.push(2)
+	stack.push(3)
+	stack.push(4)
+	stack.push(5)
+	stack.pop()
+	stack.pop()
+	stack.pop()
+	pop, err := stack.pop()
 	if err != nil {
 		fmt.Println(err)
 	} else {
 		fmt.Println(pop)
 	}
-	fmt.Println(value)
-	var valuePure stackPure
-	valuePure = valuePure.push(1)
-	valuePure = valuePure.push(2)
-	valuePure = valuePure.push(3)
-	valuePure = valuePure.push(4)
-	valuePure = valuePure.push(5)
-	valuePure, _, _ = valuePure.pop()
-	valuePure, _, _ = valuePure.pop()
-	fmt.Println(valuePure)
+	fmt.Println(stack)
+	var stackPure stackPure
+	stackPure = stackPure.push(1)
+	stackPure = stackPure.push(2)
+	stackPure = stackPure.push(3)
+	stackPure = stackPure.push(4)
+	stackPure = stackPure.push(5)
+	stackPure, _, _ = stackPure.pop()
+	stackPure, _, _ = stackPure.pop()
+	fmt.Println(stackPure)
 
 }
 
